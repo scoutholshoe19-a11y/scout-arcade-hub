@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scoutholshoe19-a11y.github.io/scout-arcade-hub/sitemap.xml

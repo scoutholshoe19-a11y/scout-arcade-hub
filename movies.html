@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0c0812">
+  <title>My Movies — Scout's Pixel Den</title>
+  <meta name="description" content="Add your own videos to Scout's Pixel Den. Files stay in this browser with titles, thumbnails, and playback. Nothing is uploaded.">
+  <meta name="application-name" content="Scout's Pixel Den">
+  <link rel="canonical" href="https://scoutholshoe19-a11y.github.io/scout-arcade-hub/movies.html">
+  <meta property="og:site_name" content="Scout's Pixel Den">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="My Movies — Scout's Pixel Den">
+  <meta property="og:description" content="Add your own videos to Scout's Pixel Den. Files stay in this browser with titles, thumbnails, and playback. Nothing is uploaded.">
+  <meta property="og:url" content="https://scoutholshoe19-a11y.github.io/scout-arcade-hub/movies.html">
+  <meta property="og:image" content="https://scoutholshoe19-a11y.github.io/scout-arcade-hub/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Scout's Pixel Den, a browser arcade and private movie shelf">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="My Movies — Scout's Pixel Den">
+  <meta name="twitter:description" content="Add your own videos to Scout's Pixel Den. Files stay in this browser with titles, thumbnails, and playback. Nothing is uploaded.">
+  <meta name="twitter:image" content="https://scoutholshoe19-a11y.github.io/scout-arcade-hub/og.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="logo" href="index.html"><span class="mark" aria-hidden="true"></span>Scout's Pixel Den</a>
+      <nav class="site-nav" id="site-nav" data-nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="movies.html">My Movies</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content">
+    <div class="wrap">
+      <noscript><p class="noscript">JavaScript is off. Saving videos in this browser needs it. Files are never uploaded.</p></noscript>
+      <header class="page-head">
+        <p class="eyebrow">On this device</p>
+        <h1>My Movies</h1>
+        <p>Choose videos you already have. They play here and stay in this browser's IndexedDB.</p>
+      </header>
+
+      <p class="privacy-note">These files stay on this device. Scout's Pixel Den never uploads them, and this page does not link to outside streams or downloads.</p>
+
+      <section class="storage-panel" aria-labelledby="storage-title">
+        <h2 id="storage-title">Storage on this device</h2>
+        <p id="storage-estimate">Checking how much room this browser reports…</p>
+        <p id="storage-movies">Shelf: empty</p>
+      </section>
+
+      <section class="dropzone" id="dropzone" aria-label="Add videos">
+        <p class="drop-title">Drop videos here</p>
+        <p>Or browse files already on this device. You can also drop anywhere on this page.</p>
+        <label class="btn btn-primary" for="video-files">Browse videos</label>
+        <input class="file-input" id="video-files" type="file" accept="video/*" multiple>
+        <p class="fine">Very large files can fail if this browser runs out of room for the site.</p>
+      </section>
+      <p id="movie-status" class="status" role="status"></p>
+
+      <div class="movie-layout">
+        <div id="shelf" class="shelf">
+          <p class="empty-shelf">Your shelf is empty. Add a video from this device to start a private library.</p>
+        </div>
+        <section class="player-panel" aria-label="Player">
+          <div class="screen" id="screen">
+            <video id="player" controls playsinline preload="metadata"></video>
+            <p class="screen-idle" id="screen-idle">Choose a movie from the shelf to play it here.</p>
+          </div>
+          <p class="now-playing" id="now-playing">Nothing playing yet.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>Scout's Pixel Den. Games run in the browser. Movie files stay on this device.</p>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="movies.html">My Movies</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="js/common.js"></script>
+  <script src="js/movies.js"></script>
+</body>
+</html>
